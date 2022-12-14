@@ -2,28 +2,36 @@
 using AdventOfCode.DayTwo;
 using FluentAssertions;
 
-namespace AdventOfCode.Tests.DayOne
+namespace AdventOfCode.Tests.DayTwo
 {
     public class DayTwoTestTests
     {
-        private IEnumerable<Game> _input;
-
-        [SetUp]
-        public void Setup()
+        [Test]
+        public void CalculateScoreFromStrategyGuide_CorrectlyCalculatesScoreAccordingToData()
         {
-            this._input = new List<Game>
+            var input = new List<Game>
             {
-                new Game('A', 'Y'),
-                new Game('B', 'X'),
-                new Game('C', 'Z')
+                new Game(TheirChoice.Rock, YourChoice.Paper),
+                new Game(TheirChoice.Paper, YourChoice.Rock),
+                new Game(TheirChoice.Scissors, YourChoice.Scissors)
             };
+
+            var result = DayTwoTest.CalculateScoreFromStrategyGuide(input);
+            result.Should().Be(15);
         }
 
         [Test]
-        public void CalculateScoreFromStrategyGuide_CorrectlyCalculatesTheCorrectScore()
+        public void CalculateNextMoveAndReturnScore_CorrectlyPickTheNextMoveAndGiveRightScore()
         {
-            var result = DayTwoTest.CalculateScoreFromStrategyGuide(this._input);
-            result.Should().Be(15);
+            var input = new List<Game>
+            {
+                new Game(TheirChoice.Rock, DesiredOutcome.Draw),
+                new Game(TheirChoice.Paper, DesiredOutcome.Lose),
+                new Game(TheirChoice.Scissors, DesiredOutcome.Win)
+            };
+
+            var result = DayTwoTest.CalculateNextMoveAndReturnScore(input);
+            result.Should().Be(12);
         }
     }
 }

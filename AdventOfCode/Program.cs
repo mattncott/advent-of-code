@@ -10,14 +10,12 @@ namespace AdventOfCode
             var console = new ConsoleWrapper();
 
             var dayOne = new DayOneTest(console);
-
             dayOne.TestOne();
             dayOne.TestTwo();
 
             var dayTwo = new DayTwoTest(console);
-
             dayTwo.TestOne();
-            //dayOne.TestTwo();
+            dayTwo.TestTwo();
         }
     }
 }
