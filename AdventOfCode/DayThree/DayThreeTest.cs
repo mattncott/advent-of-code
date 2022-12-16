@@ -46,7 +46,7 @@
                     thirdRucksack = input.ElementAt((3 * i) + 2);
                 }
 
-                foreach (char c in firstRucksack.Contents)
+                foreach (var c in firstRucksack.Contents)
                 {
                     var foundInSecondRucksack = secondRucksack.Contents.IndexOf(c) != -1;
                     var foundInThirdRucksack = thirdRucksack.Contents.IndexOf(c) != -1;

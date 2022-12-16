@@ -31,7 +31,7 @@ namespace AdventOfCode.DayThree
 		{
             var seenInCompartmentOne = new List<char>();
 
-            foreach (char c in this.CompartmentOne)
+            foreach (var c in this.CompartmentOne)
             {
                 var existsInCompartmentTwo = this.CompartmentTwo.IndexOf(c) != -1;
 
