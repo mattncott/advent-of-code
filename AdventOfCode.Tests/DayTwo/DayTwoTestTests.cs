@@ -1,5 +1,4 @@
-﻿using AdventOfCode.DayOne;
-using AdventOfCode.DayTwo;
+﻿using AdventOfCode.DayTwo;
 using FluentAssertions;
 
 namespace AdventOfCode.Tests.DayTwo
@@ -11,9 +10,9 @@ namespace AdventOfCode.Tests.DayTwo
         {
             var input = new List<Game>
             {
-                new Game(TheirChoice.Rock, YourChoice.Paper),
-                new Game(TheirChoice.Paper, YourChoice.Rock),
-                new Game(TheirChoice.Scissors, YourChoice.Scissors)
+                new(TheirChoice.Rock, YourChoice.Paper),
+                new(TheirChoice.Paper, YourChoice.Rock),
+                new(TheirChoice.Scissors, YourChoice.Scissors)
             };
 
             var result = DayTwoTest.CalculateScoreFromStrategyGuide(input);
@@ -25,9 +24,9 @@ namespace AdventOfCode.Tests.DayTwo
         {
             var input = new List<Game>
             {
-                new Game(TheirChoice.Rock, DesiredOutcome.Draw),
-                new Game(TheirChoice.Paper, DesiredOutcome.Lose),
-                new Game(TheirChoice.Scissors, DesiredOutcome.Win)
+                new(TheirChoice.Rock, DesiredOutcome.Draw),
+                new(TheirChoice.Paper, DesiredOutcome.Lose),
+                new(TheirChoice.Scissors, DesiredOutcome.Win)
             };
 
             var result = DayTwoTest.CalculateNextMoveAndReturnScore(input);

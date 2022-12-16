@@ -52,11 +52,11 @@
 
                         if (generatingOutcomes)
                         {
-                            output.Add(new Game((TheirChoice)char.Parse(plays[0]), (YourChoice)char.Parse(plays[1])));
+                            output.Add(new((TheirChoice)char.Parse(plays[0]), (YourChoice)char.Parse(plays[1])));
                         }
                         else
                         {
-                            output.Add(new Game((TheirChoice)char.Parse(plays[0]), (DesiredOutcome)char.Parse(plays[1])));
+                            output.Add(new((TheirChoice)char.Parse(plays[0]), (DesiredOutcome)char.Parse(plays[1])));
                         }
                     }
                 }

@@ -1,4 +1,5 @@
 ﻿using AdventOfCode.DayOne;
+using AdventOfCode.DayThree;
 using AdventOfCode.DayTwo;
 
 namespace AdventOfCode
@@ -16,6 +17,10 @@ namespace AdventOfCode
             var dayTwo = new DayTwoTest(console);
             dayTwo.TestOne();
             dayTwo.TestTwo();
+
+            var dayThree = new DayThreeTest(console);
+            dayThree.TestOne();
+            dayThree.TestTwo();
         }
     }
 }
