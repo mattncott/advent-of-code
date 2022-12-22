@@ -3,6 +3,7 @@ using AdventOfCode.DayFour;
 using AdventOfCode.DayOne;
 using AdventOfCode.DayThree;
 using AdventOfCode.DayTwo;
+using AdventOfCode.DaySix;
 
 namespace AdventOfCode
 {
@@ -31,6 +32,10 @@ namespace AdventOfCode
             var dayFive = new DayFiveTest(console);
             dayFive.TestOne();
             dayFive.TestTwo();
+
+            var daySix = new DaySixTest(console);
+            daySix.TestOne();
+            daySix.TestTwo();
         }
     }
 }

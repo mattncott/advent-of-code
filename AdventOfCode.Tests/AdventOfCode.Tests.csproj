@@ -25,10 +25,12 @@
     <None Remove="DayThree\" />
     <None Remove="DayFour\" />
     <None Remove="DayFive\" />
+    <None Remove="DaySix\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DayThree\" />
     <Folder Include="DayFour\" />
     <Folder Include="DayFive\" />
+    <Folder Include="DaySix\" />
   </ItemGroup>
 </Project>
